@@ -1,0 +1,81 @@
+body, html{
+    height: 100%;
+    margin: 0;
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    font-width: 400;
+    line-height: 1.8em;
+    color: #666;
+}
+
+.pimg1, .pimg2, .pimg3{
+    position: relative;
+    opacity: 0.7;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /*
+        fixed = parallax
+        scroll = normal
+     */
+    background-attachment: fixed;
+}
+
+.pimg1{
+    background-image: url("../img/web.jpg");
+    min-height: 100%;
+}
+
+.pimg2{
+    background-image: url("../img/stadt.jpg");
+    min-height: 400px;
+}
+
+.pimg3{
+    background-image: url("../img/oszi.jpg");
+    min-height: 400px;
+}
+
+.section{
+    text-align: center; /* Text Ausrichtung center center/left/right */
+    padding: 10px 80px; /* Block Section 10px top+bottom 80px right+left padding-bottom: 10px, padding-top: 10px*/
+}
+
+.section-light{
+    background-color:#f4f4f4;
+    color: #666;
+}
+
+.section-dark{
+    background-color: #282e34;
+    color: #ddd;
+}
+
+.ptext{
+    position: absolute; /* Ausrichtung am body Container, da kein relative vorhanden */
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    font-size:  27px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+}
+
+.ptext .border{
+    background-color:#111;
+    color: #fff;
+    padding: 20px; /* Innenabstand,  space between content and boarder */
+    /* margin: 1000px; /* Aussenabstand,  space between boarder and next neighboard, in diesem Bsp nicht notwendig*/
+    /* border: 10px solid aqua; /* Rahmen  durchgängig Farbe aqua*/
+}
+
+.ptext .border.trans{
+    background-color: transparent; /* gilt nur wenn class="border trans" */
+}
+
+/* under 568px then */
+@media(max-width: 568px){
+    .pimg1, .pimg2, .pimg3{
+        background-attachment: scroll;
+    }
+}
